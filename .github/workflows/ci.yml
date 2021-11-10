@@ -18,3 +18,10 @@ jobs:
         minikube update-context
         kubectl cluster-info
         kubectl get pods -n kube-system
+
+    - run: |
+        npm i -g zx ts-node
+
+
+    - run: |
+        ts-node script.ts
